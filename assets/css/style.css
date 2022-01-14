@@ -5,3 +5,12 @@
     height: 600px;
     background-attachment: fixed;
 }
+
+.back-button {
+    size: 25px;
+
+}
+
+.icon {
+    size: 48px;
+}
