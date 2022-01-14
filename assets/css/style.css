@@ -1,0 +1,7 @@
+.bg-img { 
+    background-image: url("../images/cocktail.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    background-attachment: fixed;
+}
