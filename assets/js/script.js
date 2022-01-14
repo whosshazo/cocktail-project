@@ -70,21 +70,15 @@ function findMixinIndex(mixin) {
 }
 ref = findMixinIndex("Egg");
 
-const avaiable_ing = new Set(['Kahlua', 'Sambuca', 'Grand Marnier', 'Vodka']);
-var test = drinkRecipes.filter(cocktail => {
-    cocktail.ingArray.every();
-    console.log(cocktail.ingArray);
-})
-console.log(test);
+function findDrinks() {
+    var selections;
+    if ($('.checkbox').is(':checked')) {
+        selections.push($(this).text());
+    }
+    let avaiable_ing = new Set(selections);
 
-//error message : Uncaught TypeError: Method Set.prototype.has called on incompatible receiver undefined
 
-/* const avaiable_ing = new Set(['Kahlua', 'Sambuca', 'Grand Marnier', 'Vodka']);
-var test = drinkRecipes.filter((cocktail) => {
-  console.log('cocktail :: ', cocktail);
-  return cocktail.ingArray.every((item) => {
-    console.log('ingredient item :: ', item);
-    return avaiable_ing.has(item);
-  });
-});
-console.log(test); */
+    var drinks = drinkRecipes.filter(r => r.ingArray.every(i => avaiable_ing.has(i)));
+    return drinks;
+}
+drinks = findDrinks();
