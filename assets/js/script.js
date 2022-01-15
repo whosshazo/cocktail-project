@@ -9,7 +9,6 @@ if (drinkRecipes == null) {
     grabDrinks();
 }
 function grabMixins() {
-    console.log("Mixins Api");
     for (var i = 1; i < 580; i++) {
         var mixinApiUrl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=" + i;
         fetch(mixinApiUrl).then(function (response) {
@@ -22,6 +21,21 @@ function grabMixins() {
             );
         });
     }
+}
+function liqourVsExtras() {
+    var liqour = [];
+    var extras = [];
+    for (var i = 0; i < mixins.length; i++) {
+        if (mixins[i].strAlcohol == "Yes") {
+            liqour.push(mixins[i]);
+        }
+        else {
+            extras.push(mixins[i]);
+        }
+    }
+    var mixinsParsed = { liqour, extras };
+    console.log(mixinsParsed);
+    dynamicLists(mixinsParsed);
 }
 function grabDrinks() {
     console.log("Drinks Api");
@@ -68,8 +82,6 @@ function findMixinIndex(mixin) {
     }
     return ref;
 }
-ref = findMixinIndex("Egg");
-
 function findDrinks() {
     var selections;
     if ($('.checkbox').is(':checked')) {
@@ -81,4 +93,16 @@ function findDrinks() {
     var drinks = drinkRecipes.filter(r => r.ingArray.every(i => avaiable_ing.has(i)));
     return drinks;
 }
-drinks = findDrinks();
+function dynamicLists(mixinsParsed) {
+    for (var i = 0; i < mixinsParsed.liqour.length; i++) {
+        $(".liqourList").append([
+            $("<a>", { "class": "" }, { "": "" }).text(mixinsParsed.liqour[i])
+        ]);
+    }
+    for (var i = 0; i < mixinsParsed.extras.length; i++) {
+        $(".liqourList").append([
+            $("<a>", { "class": "" }, { "": "" }).text(mixinsParsed.extras[i])
+        ]);
+    }
+}
+liqourVsExtras();
