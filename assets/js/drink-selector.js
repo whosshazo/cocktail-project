@@ -1,8 +1,8 @@
-// // dropdown for Liquors
-// var menu = document.getElementById('dropdown-liquor');
 
-// menu.addEventListener('click', e=>{
-//     e.stopPropagation();
-//     menu.classList.toggle('is-active');
-// })
-
+var checkList = document.getElementById('list1');
+checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
