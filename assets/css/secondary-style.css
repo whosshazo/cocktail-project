@@ -3,12 +3,13 @@
 }
 
 /* !important overrides Bulma */
-footer{
+#footnote {
     background-color: var(--yellow) !important;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding: 30px;
 }
 
 /* Icons are font */
