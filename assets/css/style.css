@@ -6,6 +6,8 @@
     background-attachment: fixed;
 }
 
+/* Dropdown 1 Begin */
+
 #dropdown1 {
   display: flex;
   justify-content: space-evenly;
@@ -74,6 +76,8 @@
     display: block;
   }
 
+  /* Dropdown 1 End */
+
   /* Dropdown #2 */
   
   .dropdown-check-list {
@@ -129,4 +133,27 @@
   
   .dropdown-check-list.visible .items {
     display: block;
+  }
+
+  /* Drodown 2 End */
+
+  /* Recipe Page Begin */
+
+  .content {
+    color: white;
+
+    
+  }
+
+  .drink-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    color: white;
+  }
+
+  .recipe {
+    display: flex;
+    justify-content: flex-end;
   }
