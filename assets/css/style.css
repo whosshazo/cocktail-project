@@ -5,3 +5,155 @@
     height: 600px;
     background-attachment: fixed;
 }
+
+/* Dropdown 1 Begin */
+
+#dropdown1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-top: 5rem;
+}
+
+
+.dropdown-check-list {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: bisque;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .dropdown-check-list .anchor {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 150px 15px 110px;
+  }
+  
+  .dropdown-check-list .anchor:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  .dropdown-check-list .anchor:active:after {
+    right: 8px;
+    top: 21%;
+  }
+  
+  .dropdown-check-list ul.items {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border-top: none;
+  }
+  
+  .dropdown-check-list ul.items li {
+    list-style: none;
+  }
+  
+  .dropdown-check-list.visible .anchor {
+    color: black;
+  }
+  
+  .dropdown-check-list.visible .items {
+    display: block;
+  }
+
+  /* Dropdown 1 End */
+
+  /* Dropdown #2 */
+  
+  .dropdown-check-list {
+    display: inline-block;
+    border-radius: 15px;
+    background-color: bisque;
+    margin-top: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .dropdown-check-list .anchor2 {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    padding: 15px 150px 15px 110px;
+  }
+  
+  .dropdown-check-list .anchor2:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+  }
+  
+  .dropdown-check-list .anchor2:active:after {
+    right: 8px;
+    top: 21%;
+  }
+  
+  .dropdown-check-list ul.items {
+    padding: 2px;
+    display: none;
+    margin: 0;
+    border-top: none;
+  }
+  
+  .dropdown-check-list ul.items li {
+    list-style: none;
+  }
+  
+  .dropdown-check-list.visible .anchor2 {
+    color: black;
+  }
+  
+  .dropdown-check-list.visible .items {
+    display: block;
+  }
+
+  /* Drodown 2 End */
+
+  /* Recipe Page Begin */
+
+  .content {
+    color: white;
+
+    
+  }
+
+  .drink-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    color: white;
+  }
+
+  .recipe {
+    display: flex;
+    justify-content: flex-end;
+  }
