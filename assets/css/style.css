@@ -6,6 +6,8 @@
     background-attachment: fixed;
 }
 
+/* Dropdown 1 Begin */
+
 #dropdown1 {
   display: flex;
   justify-content: space-evenly;
@@ -74,6 +76,8 @@
     display: block;
   }
 
+  /* Dropdown 1 End */
+
   /* Dropdown #2 */
   
   .dropdown-check-list {
@@ -130,3 +134,104 @@
   .dropdown-check-list.visible .items {
     display: block;
   }
+
+  /* Drodown 2 End */
+
+  /* Recipe Page Begin */
+
+
+  .recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem;
+    justify-content: center;
+  }
+
+  .drink-image {
+    height: 128px;
+    width: 128px
+  }
+
+  .image-container {
+    flex: 33% 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 1rem;
+  }
+
+  .drink-of-choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    flex: 60% 0 0;
+  }
+
+ .drink-title {
+  font-size: 3rem;
+  padding-left: 1rem;
+  text-decoration: underline;
+ }
+
+
+
+  .drink-content {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    /* background: rgba(24,24,27,0.6); */
+    /* border-radius: 10px; */
+    padding-left: 1rem;
+    /* border: 1px solid white; */
+    text-shadow:
+        0.03em 0 black,
+        0 0.03em black,
+        -0.03em 0 black,
+        0 -0.03em black;
+  }
+
+  .class-instructions {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .instructions {
+   flex: 60%;
+   color: white;
+   display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: auto;
+    padding-left: 1rem;
+    padding-top: 2rem;
+  }
+
+  .mixing-directions {
+    display: flex;
+    text-align: left;
+    font-size: 2rem;
+    text-decoration: underline;
+    
+  }
+
+  .spacing {
+    flex: 33%;
+  }
+
+  .mixing-instructions {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    text-shadow:
+        0.03em 0 black,
+        0 0.03em black,
+        -0.03em 0 black,
+        0 -0.03em black;
+  }
+
+ 
