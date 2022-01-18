@@ -23,3 +23,23 @@ font-size: 2rem;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
+
+.container {
+        border:1px solid #000;
+        height:200px;
+        width:500px;
+        background-color: #fff;
+      }
+
+.container ul {
+        list-style:none;
+        max-height:200px;
+        margin:0;
+        overflow:auto;
+        padding:0;
+        text-indent:10px;
+      }
+
+.container li {
+        line-height:25px;
+      }
