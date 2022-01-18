@@ -58,28 +58,6 @@ function parseIng() {
     localStorage.setItem("drinkRecipes", JSON.stringify(drinkRecipes));
 }
 // --------------------------------------------------------------------------------------------
-function findMixinIndex(mixin) {
-    var ref = [],
-        indexMixin = [];
-    for (var i = 0; i < drinkRecipes.length; i++) {
-        indexMixin[i] = drinkRecipes[i].ingArray.some(ing => ing == mixin);
-    }
-    for (var i = 0; i < indexMixin.length; i++) {
-        if (indexMixin[i]) {
-            ref.push(i);
-        }
-    }
-    return ref;
-}
-function findDrinks() {
-    var selections;
-    if ($('.checkbox').is(':checked')) {
-        selections.push($(this).text());
-    }
-    let avaiable_ing = new Set(selections);
-    var drinks = drinkRecipes.filter(r => r.ingArray.every(i => avaiable_ing.has(i)));
-    return drinks;
-}
 function liqourVsExtras() {
     var mixinsParsed = JSON.parse(localStorage.getItem("mixinsParsed"));
     if (mixinsParsed == null) {
@@ -97,6 +75,21 @@ function liqourVsExtras() {
         localStorage.setItem("mixinsParsed", JSON.stringify(mixinsParsed));
     }
 }
+function findMixinIndex(mixin) {
+    var ref = [],
+        indexMixin = [];
+    for (var i = 0; i < drinkRecipes.length; i++) {
+        indexMixin[i] = drinkRecipes[i].ingArray.some(ing => ing == mixin);
+    }
+    for (var i = 0; i < indexMixin.length; i++) {
+        if (indexMixin[i]) {
+            ref.push(i);
+        }
+    }
+    return ref;
+}
+
+
 
 $("#Welcome").on("click", liqourVsExtras);
-//Functions not being called: liqourVsExtras() findDrinks() findMixinIndex()
+//Functions not being called: findDrinks() findMixinIndex()
