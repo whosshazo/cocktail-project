@@ -1,4 +1,4 @@
-
+var drinkRecipes = JSON.parse(localStorage.getItem("drinkRecipes"));
 var checkList = document.getElementById('list1');
 checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
   if (checkList.classList.contains('visible'))
@@ -39,18 +39,24 @@ function getChecked() {
   }
   else {
     var forNum = checkedLiq.length
-
-    console.log(forNum);
-    for (var i = 0; i < forNum; i++) {
-      if (checkedLiq[i] !== undefined) {
-        liqoursChecked.push(checkedLiq[i].nextElementSibling.innerText);
-      }
-      if (checkedExt[i] !== undefined) {
-        extrasChecked.push(checkedExt[i].nextElementSibling.innerText);
-      }
-    }
-    checkedList = [liqoursChecked, extrasChecked];
-    localStorage.setItem("checkedList", JSON.stringify(checkedList));
   }
+  console.log(forNum);
+  for (var i = 0; i < forNum; i++) {
+    if (checkedLiq[i] !== undefined) {
+      liqoursChecked.push(checkedLiq[i].nextElementSibling.innerText);
+    }
+    if (checkedExt[i] !== undefined) {
+      extrasChecked.push(checkedExt[i].nextElementSibling.innerText);
+    }
+  }
+  var checkedList = [];
+  checkedList = [liqoursChecked, extrasChecked];
+  findDrinks(checkedList);
+}
+function findDrinks(checkedList) {
+  var selections = $.merge(checkedList[0], checkedList[1]);
+  let avaiable_ing = new Set(selections);
+  var drinks = drinkRecipes.filter(r => r.ingArray.every(i => avaiable_ing.has(i)));
+  localStorage.setItem("drinkChoices", JSON.stringify(drinks));
 }
 $(".is-large").on("click", getChecked);
