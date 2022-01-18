@@ -40,28 +40,17 @@ function getChecked() {
   }
   else {
     var forNum = checkedLiq.length
-  }
-  console.log(forNum);
-  for (var i = 0; i < forNum; i++) {
-    if (checkedLiq[i] !== undefined) {
-      liqoursChecked.push(checkedLiq[i].nextElementSibling.innerText);
+
+    console.log(forNum);
+    for (var i = 0; i < forNum; i++) {
+      if (checkedLiq[i] !== undefined) {
+        liqoursChecked.push(checkedLiq[i].nextElementSibling.innerText);
+      }
+      if (checkedExt[i] !== undefined) {
+        extrasChecked.push(checkedExt[i].nextElementSibling.innerText);
+      }
     }
-    if (checkedExt[i] !== undefined) {
-      extrasChecked.push(checkedExt[i].nextElementSibling.innerText);
-    }
+    checkedList = [liqoursChecked, extrasChecked];
+    localStorage.setItem("checkedList", JSON.stringify(checkedList));
   }
-  checkedList = [liqoursChecked, extrasChecked];
-  localStorage.setItem("checkedList", JSON.stringify(checkedList));
-}
-$(".is-large").on("click", getChecked);
-
-
-
-
-/* var checkedNum = $('input[name="city[]"]:checked').length;
-if (!checkedNum) {
-  // User didn't check any checkboxes
-}
-<? foreach($cities as $city) { ?>
-  <input type="checkbox" name="city[]" value="<?=$city->id?>" id="city[]" />
-<? } ?> */
+  $(".is-large").on("click", getChecked);
