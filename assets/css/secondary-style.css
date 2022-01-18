@@ -1,5 +1,6 @@
 :root {
     --yellow: #fbe38b;
+    border-radius: value;
 }
 
 /* !important overrides Bulma */
@@ -25,10 +26,12 @@ font-size: 2rem;
 }
 
 .container {
-        border:1px solid #000;
         height:200px;
         width:500px;
-        background-color: var(--yellow);
+        background-color: bisque;
+        border-radius: 10px;
+        position: relative;
+        top: 100px;
       }
 
 .container ul {
