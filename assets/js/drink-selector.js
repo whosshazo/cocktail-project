@@ -6,12 +6,12 @@ checkList.getElementsByClassName('anchor')[0].onclick = function (evt) {
   else
     checkList.classList.add('visible');
 }
-var checkList = document.getElementById('list2');
-checkList.getElementsByClassName('anchor2')[0].onclick = function (evt) {
-  if (checkList.classList.contains('visible'))
-    checkList.classList.remove('visible');
+var checkList2 = document.getElementById('list2');
+checkList2.getElementsByClassName('anchor2')[0].onclick = function (evt) {
+  if (checkList2.classList.contains('visible'))
+    checkList2.classList.remove('visible');
   else
-    checkList.classList.add('visible');
+    checkList2.classList.add('visible');
 }
 function dynamicLists() {
   mixinsParsed = JSON.parse(localStorage.getItem("mixinsParsed"));

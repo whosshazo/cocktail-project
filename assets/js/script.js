@@ -81,19 +81,21 @@ function findDrinks() {
     return drinks;
 }
 function liqourVsExtras() {
-    console.log("test");
-    var liqour = [];
-    var extras = [];
-    for (var i = 0; i < mixins.length; i++) {
-        if (mixins[i].strAlcohol == "Yes") {
-            liqour.push(mixins[i]);
+    var mixinsParsed = JSON.parse(localStorage.getItem("mixinsParsed"));
+    if (mixinsParsed == null) {
+        var liqour = [];
+        var extras = [];
+        for (var i = 0; i < mixins.length; i++) {
+            if (mixins[i].strAlcohol == "Yes") {
+                liqour.push(mixins[i]);
+            }
+            else {
+                extras.push(mixins[i]);
+            }
         }
-        else {
-            extras.push(mixins[i]);
-        }
+        var mixinsParsed = { liqour, extras };
+        localStorage.setItem("mixinsParsed", JSON.stringify(mixinsParsed));
     }
-    var mixinsParsed = { liqour, extras };
-    localStorage.setItem("mixinsParsed", JSON.stringify(mixinsParsed));
 }
 
 $("#Welcome").on("click", liqourVsExtras);
