@@ -1,51 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cocky Cocktails | Our Recipes Your Cabinet</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/secondary-style.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+  </head>
 
-
-<body>
+  
+  <body>
     <!--Header Begin-->
     <section class="hero is-small is-warning has-text-centered">
-        <div class="hero-body">
-        <p class="title"><i class="fas fa-cocktail"></i>
-            Cocky Cocktails
+      <div class="hero-body">
+        <p class="title">
+          <i class="fas fa-cocktail"></i>
+          Cocky Cocktails
         </p>
-        <p class="subtitle">
-            Enjoy this Recipe
-        </p>
-        </div>
+        <p class="subtitle">Enjoy this Recipe</p>
+      </div>
     </section>
     <!--Header End-->
 
-    <div class="bg-img">
+    <main class="bg-img">
+        <div>
 
-    <!--Content Begin-->
+        <!--Start of Drink Description-->
 
-    <div class="content">
-        <h1 class="drink-name">Hello World</h1>
-        <p class="recipe">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus. Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis neque.</p>
-        <h2>Second level</h2>
-        <p>Curabitur accumsan turpis pharetra <strong>augue tincidunt</strong> blandit. Quisque condimentum maximus mi, sit amet commodo arcu rutrum id. Proin pretium urna vel cursus venenatis. Suspendisse potenti. Etiam mattis sem rhoncus lacus dapibus facilisis. Donec at dignissim dui. Ut et neque nisl.</p>
-        <ul>
-          <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
-          <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
-          <li>Aliquam nec felis in sapien venenatis viverra fermentum nec lectus.</li>
-          <li>Ut non enim metus.</li>
-        </ul>
-    </div>
+        <!--Drink Image Section-->
 
+        <article class="recipe-container">
+            <figure class="image-container">
+            <img
+                class="drink-image"
+                src="https://bulma.io/images/placeholders/128x128.png"
+            />
+            </figure>
+            
+            <!--About Drink Section-->
 
+            <div class="drink-of-choice">
+            <h1 class="drink-title">White Russian</h1>
+            <p class="drink-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas
+                non massa sem. Etiam finibus odio quis feugiat facilisis.
+            </p>
+            </div>
+            
+            <!--Instructions Section Begin-->
 
-  </div>
+            <div class="spacing"></div>
+            <div class="instructions">
+                <div class="class-instructions">
+                    <h2 class="mixing-directions">Mixing Directions</h2>
+                    <ol class="mixing-instructions is-upper-roman">
+                        <li>In fermentum leo eu lectus mollis, quis dictum mi aliquet.</li>
+                        <li>Morbi eu nulla lobortis, lobortis est in, fringilla felis.</li>
+                        <li>
+                            Aliquam nec felis in sapien venenatis viverra fermentum nec
+                            lectus.
+                        </li>
+                        <li>Ut non enim metus.</li>
+                    </ol>
+                </div>            
+            </div>
 
+        </article>
 
+        <!--Drink Description End-->
 
-</body>
+        </div>
+    </main>
+
+    <!--Footer Begin-->
+
+    <footer id="footnote">
+      <p>
+        &copy;Cocky Cocktails
+  
+      </p>
+      <i class="fas fa-cocktail"></i>
+      CockyCocktails@gmail.com
+    </footer>
+
+    <script src="./assets/js/drink-selector.js"></script>
+  </body>
+</html>

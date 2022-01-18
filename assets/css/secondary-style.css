@@ -1,0 +1,45 @@
+:root {
+    --yellow: #fbe38b;
+}
+
+/* !important overrides Bulma */
+#footnote {
+    background-color: var(--yellow) !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+/* Icons are font */
+I {
+font-size: 2rem;
+}
+
+/* Places home button in the top right */
+#homeBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.container {
+        border:1px solid #000;
+        height:200px;
+        width:500px;
+        background-color: #fff;
+      }
+
+.container ul {
+        list-style:none;
+        max-height:200px;
+        margin:0;
+        overflow:auto;
+        padding:0;
+        text-indent:10px;
+      }
+
+.container li {
+        line-height:25px;
+      }

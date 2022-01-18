@@ -1,3 +1,4 @@
+// Set universal variables
 var mixins = JSON.parse(localStorage.getItem("mixins"));
 var drinkRecipes = JSON.parse(localStorage.getItem("drinkRecipes"));
 if (mixins == null) {
@@ -8,6 +9,8 @@ if (drinkRecipes == null) {
     drinkRecipes = [];
     grabDrinks();
 }
+// --------------------------------------------------------------------------------------------
+// Functions used to call APIs and parse data.
 function grabMixins() {
     for (var i = 1; i < 580; i++) {
         var mixinApiUrl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=" + i;
@@ -21,21 +24,6 @@ function grabMixins() {
             );
         });
     }
-}
-function liqourVsExtras() {
-    var liqour = [];
-    var extras = [];
-    for (var i = 0; i < mixins.length; i++) {
-        if (mixins[i].strAlcohol == "Yes") {
-            liqour.push(mixins[i]);
-        }
-        else {
-            extras.push(mixins[i]);
-        }
-    }
-    var mixinsParsed = { liqour, extras };
-    console.log(mixinsParsed);
-    dynamicLists(mixinsParsed);
 }
 function grabDrinks() {
     console.log("Drinks Api");
@@ -69,6 +57,7 @@ function parseIng() {
     }
     localStorage.setItem("drinkRecipes", JSON.stringify(drinkRecipes));
 }
+// --------------------------------------------------------------------------------------------
 function findMixinIndex(mixin) {
     var ref = [],
         indexMixin = [];
@@ -88,21 +77,26 @@ function findDrinks() {
         selections.push($(this).text());
     }
     let avaiable_ing = new Set(selections);
-
-
     var drinks = drinkRecipes.filter(r => r.ingArray.every(i => avaiable_ing.has(i)));
     return drinks;
 }
-function dynamicLists(mixinsParsed) {
-    for (var i = 0; i < mixinsParsed.liqour.length; i++) {
-        $(".liqourList").append([
-            $("<a>", { "class": "" }, { "": "" }).text(mixinsParsed.liqour[i])
-        ]);
-    }
-    for (var i = 0; i < mixinsParsed.extras.length; i++) {
-        $(".liqourList").append([
-            $("<a>", { "class": "" }, { "": "" }).text(mixinsParsed.extras[i])
-        ]);
+function liqourVsExtras() {
+    var mixinsParsed = JSON.parse(localStorage.getItem("mixinsParsed"));
+    if (mixinsParsed == null) {
+        var liqour = [];
+        var extras = [];
+        for (var i = 0; i < mixins.length; i++) {
+            if (mixins[i].strAlcohol == "Yes") {
+                liqour.push(mixins[i]);
+            }
+            else {
+                extras.push(mixins[i]);
+            }
+        }
+        var mixinsParsed = { liqour, extras };
+        localStorage.setItem("mixinsParsed", JSON.stringify(mixinsParsed));
     }
 }
-liqourVsExtras();
+
+$("#Welcome").on("click", liqourVsExtras);
+//Functions not being called: liqourVsExtras() findDrinks() findMixinIndex()
