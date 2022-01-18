@@ -81,6 +81,7 @@ function findDrinks() {
     return drinks;
 }
 function liqourVsExtras() {
+    console.log("test");
     var liqour = [];
     var extras = [];
     for (var i = 0; i < mixins.length; i++) {
@@ -92,19 +93,8 @@ function liqourVsExtras() {
         }
     }
     var mixinsParsed = { liqour, extras };
-    dynamicLists(mixinsParsed);
+    localStorage.setItem("mixinsParsed", JSON.stringify(mixinsParsed));
 }
-function dynamicLists(mixinsParsed) {
-    for (var i = 0; i < mixinsParsed.liqour.length; i++) {
-        $(".liqourList").append([
-            $("<a>", { "class": "" }, { "": "" }).text(mixinsParsed.liqour[i])
-        ]);
-    }
-    for (var i = 0; i < mixinsParsed.extras.length; i++) {
-        $(".liqourList").append([
-            $("<a>", { "class": "" }, { "": "" }).text(mixinsParsed.extras[i])
-        ]);
-    }
-}
-$("#Welcome").on("click", liqourVsExtras());
+
+$("#Welcome").on("click", liqourVsExtras);
 //Functions not being called: liqourVsExtras() findDrinks() findMixinIndex()
