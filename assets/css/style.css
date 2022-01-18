@@ -19,6 +19,7 @@ flex: 50% 0 0;
 display: flex;
 justify-content: center;
 }
+
 #dropdown2{
   flex: 50% 0 0;
   display: flex;
@@ -86,6 +87,8 @@ justify-content: center;
 
   .dropdown-check-list.visible .ul1 {
     display: block;
+    max-height:200px;
+    overflow:auto;
   }
   .dropdown-check-list.visible .anchor2 {
     color: black;
@@ -93,6 +96,8 @@ justify-content: center;
 
   .dropdown-check-list.visible .ul2 {
     display: block;
+    max-height:200px;
+    overflow:auto;
   }
   
 
