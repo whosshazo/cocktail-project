@@ -8,10 +8,22 @@
 
 /* Dropdown 1 Begin */
 
-#dropdown1 {
-  display: flex;
-  justify-content: space-evenly;
+#dropdowncont {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
 }
+
+#dropdown1{
+flex: 50% 0 0;
+display: flex;
+justify-content: center;
+}
+#dropdown2{
+  flex: 50% 0 0;
+  display: flex;
+  justify-content: center;
+  }
 
 .buttons {
   display: flex;
@@ -71,10 +83,18 @@
   .dropdown-check-list.visible .anchor {
     color: black;
   }
-  
-  .dropdown-check-list.visible .items {
+
+  .dropdown-check-list.visible .ul1 {
     display: block;
   }
+  .dropdown-check-list.visible .anchor2 {
+    color: black;
+  }
+
+  .dropdown-check-list.visible .ul2 {
+    display: block;
+  }
+  
 
   /* Dropdown 1 End */
 
@@ -127,13 +147,7 @@
     list-style: none;
   }
   
-  .dropdown-check-list.visible .anchor2 {
-    color: black;
-  }
   
-  .dropdown-check-list.visible .items {
-    display: block;
-  }
 
   /* Drodown 2 End */
 
