@@ -9,7 +9,11 @@ for (var j = 1; j < drinkRecipes[j].ingArray.length; j++) {
     $(".drink-measurements").append($("<li>").text((drinkRecipes[index][keyIng]) + " : " + (drinkRecipes[index][keyMeas])))
 }
 var steps = drinkRecipes[index].strInstructions.split(".");
-console.log(steps);
-for (var i = 0; i < steps.length - 1; i++) {
-    $(".mixing-instructions").append($("<li>").text(steps[i]));
+for (var i = 0; i < steps.length; i++) {
+    if (steps[i] !== "") {
+        $(".mixing-instructions").append($("<li>").text(steps[i]));
+    }
 }
+/* else {
+    $(".mixing-instructions").append($("<li>").text("Mix it all up!"));
+} */
