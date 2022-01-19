@@ -292,7 +292,15 @@ justify-content: center;
   padding: 2px;
   width: 75px;
 }
-
+.videoWrapper{
+  display: flex;
+  justify-content: center;
+  background-color: #fbe38b;
+}
+.video{
+  flex:100%;
+  
+}
 /* Media Querys */
 
 
