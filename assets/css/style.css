@@ -292,3 +292,14 @@ justify-content: center;
   padding: 2px;
   width: 75px;
 }
+
+/* Media Querys */
+
+
+@media screen and (max-width: 980px) {
+  #dropdowncont {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+}  
