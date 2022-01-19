@@ -161,7 +161,10 @@ justify-content: center;
 
   .recipe-container {
     position: absolute;
-    left: 15rem;
+    margin: 2rem 2rem;
+    left: 0;
+    right: 0;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -169,7 +172,6 @@ justify-content: center;
     border-radius: 10px;
     border: 1px solid white;
     padding-top: 2rem;
-    margin: 2rem;
   }
 
   .drink-image {
@@ -218,15 +220,15 @@ justify-content: center;
 
   .class-instructions {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
   }
 
   .instructions {
-   flex: 60%;
+   flex: 100%;
    color: white;
    display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     margin: auto;
     padding-left: 1rem;
@@ -246,6 +248,7 @@ justify-content: center;
   }
 
   .mixing-instructions {
+    text-align: left;
     padding: 2rem;
     font-size: 1rem;
     font-weight: bold;
@@ -270,7 +273,22 @@ justify-content: center;
     justify-content: space-between;
     
   }
-
-
-
- 
+#drink-holder{
+  text-align: center;
+}
+#drink-holder li{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: auto;
+}
+#drink-holder a{
+  color: black;
+  border-bottom: 1px solid black;
+}
+.imageThumb{
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 2px;
+  width: 75px;
+}
