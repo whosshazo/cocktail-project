@@ -1,4 +1,4 @@
-.bg-img { 
+           .bg-img { 
     background-image: url("../images/cocktail.jpg");
     background-size: cover;
     background-position: center;
@@ -160,10 +160,16 @@ justify-content: center;
 
 
   .recipe-container {
+    position: absolute;
+    left: 15rem;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 3rem;
     justify-content: center;
+    background: rgba(24,24,27,0.6);
+    border-radius: 10px;
+    border: 1px solid white;
+    padding-top: 2rem;
+    margin: 2rem;
   }
 
   .drink-image {
@@ -196,14 +202,13 @@ justify-content: center;
 
 
 
-  .drink-content {
+  .drink-measurements {
     color: white;
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: bold;
-    /* background: rgba(24,24,27,0.6); */
-    /* border-radius: 10px; */
+    
     padding-left: 1rem;
-    /* border: 1px solid white; */
+
     text-shadow:
         0.03em 0 black,
         0 0.03em black,
@@ -241,16 +246,31 @@ justify-content: center;
   }
 
   .mixing-instructions {
-    padding-top: 1rem;
+    padding: 2rem;
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
+    
     text-shadow:
         0.03em 0 black,
         0 0.03em black,
         -0.03em 0 black,
         0 -0.03em black;
   }
+
+  #backBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: space-between;
+    
+  }
+
+
 
  
