@@ -5,4 +5,4 @@ function dynamicLists() {
         $("#drink-holder").append($("<li>").append($("<button>").text(drinkChoices[i].strDrink)));
     }
 }
-$(document).ready(dynamicLists);
+dynamicLists();
