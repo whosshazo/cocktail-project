@@ -21,7 +21,9 @@ $(function () {
 var getDrinkVideo = function () {
   var videoDataFormat = [];
   drinkValue = drinkValue.replace(/\s/g, '');
-  var apiUrl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=' + drinkValue + 'cocktail&key=AIzaSyBIt04xPRvvV0N19PHUXvGRnz4SwBZeHGw';
+  var apiUrl = 'https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=' + drinkValue + 'cocktail&key=AIzaSyDeYvW3HSa4AoUphIkEkC9Sy_kqiKAz6bo';
+
+
 
   console.log(apiUrl);
   // make a get request to url
@@ -38,7 +40,7 @@ var getDrinkVideo = function () {
         });
 
       } else {
-        alert("Error: " + response.statusText);
+        alert("Error: API Could Not Load");
       }
     })
 };
