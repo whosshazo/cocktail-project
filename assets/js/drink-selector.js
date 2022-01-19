@@ -17,16 +17,22 @@ checkList2.getElementsByClassName('anchor2')[0].onclick = function (evt) {
 function dynamicLists() {
   mixinsParsed = JSON.parse(localStorage.getItem("mixinsParsed"));
   for (var i = 0; i < mixinsParsed.liqour.length; i++) {
-    $(".ul1").append([
-      $("<li>").append([$("<input>", { "type": "checkbox" }).attr("name", "liqours"), $("<span>").text(mixinsParsed.liqour[i].strIngredient)])
-    ]);
     liqourlist.push(mixinsParsed.liqour[i].strIngredient);
   }
   for (var i = 0; i < mixinsParsed.extras.length; i++) {
-    $(".ul2").append([
-      $("<li>").append([$("<input>", { "type": "checkbox" }).attr("name", "extras"), $("<span>").text(mixinsParsed.extras[i].strIngredient)])
-    ]);
     extraslist.push(mixinsParsed.extras[i].strIngredient);
+  }
+  liqourlist = liqourlist.sort();
+  extraslist = extraslist.sort();
+  for (var i = 0; i < liqourlist.length; i++) {
+    $(".ul1").append([
+      $("<li>").append([$("<input>", { "type": "checkbox" }).attr("name", "liqours"), $("<span>").text(liqourlist[i])])
+    ]);
+  }
+  for (var i = 0; i < extraslist.length; i++) {
+    $(".ul2").append([
+      $("<li>").append([$("<input>", { "type": "checkbox" }).attr("name", "extras"), $("<span>").text(extraslist[i])])
+    ]);
   }
 }
 $(document).ready(dynamicLists);
@@ -62,32 +68,3 @@ function findDrinks(checkedList) {
 }
 $(".is-large").on("click", getChecked);
 
-/* $( function() {
-  var availableTags = [
-    "ActionScript",
-    "AppleScript",
-    "Asp",
-    "BASIC",
-    "C",
-    "C++",
-    "Clojure",
-    "COBOL",
-    "ColdFusion",
-    "Erlang",
-    "Fortran",
-    "Groovy",
-    "Haskell",
-    "Java",
-    "JavaScript",
-    "Lisp",
-    "Perl",
-    "PHP",
-    "Python",
-    "Ruby",
-    "Scala",
-    "Scheme"
-  ];
-  $( "#tags" ).autocomplete({
-    source: availableTags
-  });
-} ); */
