@@ -52,4 +52,11 @@ font-size: 2rem;
     justify-content: flex-start;
       }
 
+      #video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--yellow);
+      }      
+
       
