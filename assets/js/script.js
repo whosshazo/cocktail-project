@@ -12,6 +12,7 @@ if (drinkRecipes == null) {
 // --------------------------------------------------------------------------------------------
 // Functions used to call APIs and parse data.
 function grabMixins() {
+    console.log("Mixins Api");
     for (var i = 1; i < 580; i++) {
         var mixinApiUrl = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?iid=" + i;
         fetch(mixinApiUrl).then(function (response) {
@@ -37,11 +38,11 @@ function grabDrinks() {
                         drinkRecipes.push(data.drinks[i]);
                     }
                 }
+                parseIng();
             }
             );
         });
     }
-    parseIng();
 }
 function parseIng() {
     for (var i = 0; i < drinkRecipes.length; i++) {
@@ -90,6 +91,6 @@ function findMixinIndex(mixin) {
 }
 
 
-
+console.log(text);
 $("#Welcome").on("click", liqourVsExtras);
 //Functions not being called: findDrinks() findMixinIndex()
