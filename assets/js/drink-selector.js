@@ -15,7 +15,6 @@ checkList2.getElementsByClassName('anchor2')[0].onclick = function (evt) {
 }
 function dynamicLists() {
   mixinsParsed = JSON.parse(localStorage.getItem("mixinsParsed"));
-  console.log(mixinsParsed);
   for (var i = 0; i < mixinsParsed.liqour.length; i++) {
     $(".ul1").append([
       $("<li>").append([$("<input>", { "type": "checkbox" }).attr("name", "liqours"), $("<span>").text(mixinsParsed.liqour[i].strIngredient)])
@@ -40,7 +39,6 @@ function getChecked() {
   else {
     var forNum = checkedLiq.length
   }
-  console.log(forNum);
   for (var i = 0; i < forNum; i++) {
     if (checkedLiq[i] !== undefined) {
       liqoursChecked.push(checkedLiq[i].nextElementSibling.innerText);
