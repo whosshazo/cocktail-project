@@ -7,8 +7,7 @@ function dynamicLists() {
 }
 $("ul").on("click", function (event) {
     var target = $(event.target).children();
-    var drinkShow = target.prevObject[0].innerText;
-    console.log(drinkShow);
-    localStorage.setItem("drinkShow", JSON.stringify(drinkShow));
+    var drinkValue = target.prevObject[0].innerText;
+    localStorage.setItem("drinkValue", JSON.stringify(drinkValue));
 })
 dynamicLists();
