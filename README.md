@@ -1,12 +1,12 @@
 # cocktail-project
  Project 1 Team 3 Due : 26 Jan 2022
 
-## Github Repo Link : 
+## Github Repo Link : https://github.com/whosshazo/cocktail-project
 
-## Webpage Link : 
+## Webpage Link : https://whosshazo.github.io/cocktail-project/
 
 ## Screenshot Below :
-![alt text](./assets/images/)
+![alt text](./assets/images/cocky-cocktails-screenshot.png)
 
 ---
 ## Grading Criteria :
