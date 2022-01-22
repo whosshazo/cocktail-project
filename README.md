@@ -6,7 +6,7 @@
 ## Webpage Link : 
 
 ## Screenshot Below :
-![alt text](./assets/images/ScreenShot.png)
+![alt text](./assets/images/)
 
 ---
 ## Grading Criteria :
