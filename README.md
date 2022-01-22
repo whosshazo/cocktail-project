@@ -31,7 +31,7 @@
 ---
 ### API's to use :
 #### Cocktail DB API : https://www.thecocktaildb.com/api.php
-#### Youtube video API : https://rapidapi.com/apilovercom/api/youtube-videos/
+#### Youtube video API : https://developers.google.com/youtube/v3
 ---
 
  
